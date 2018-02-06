@@ -5,9 +5,31 @@
 
     <data class="MiningDashboardBinding"/>
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/tbToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/header_gradient"
+        android:text="@string/app_name">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/app_name"
+            android:textSize="@dimen/header_text_size"/>
+
+    </android.support.v7.widget.Toolbar>
+
     <WebView
         android:id="@+id/wvMiningDash"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tbToolbar"/>
+
+    </RelativeLayout>
 
 </layout>

@@ -1,8 +1,8 @@
 package io.xsmobilemining.presentation.views.activities;
 
 import android.databinding.DataBindingUtil;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.webkit.WebViewClient;
 
 import io.xsmobilemining.R;
@@ -28,5 +28,6 @@ public class MiningDashboardActivity extends AppCompatActivity {
     private void launchWebView(){
         mdBinding.wvMiningDash.loadUrl(MINING_DASH_URL);
         mdBinding.wvMiningDash.setWebViewClient(new WebViewClient());
+        mdBinding.wvMiningDash.getSettings().setJavaScriptEnabled(true);
     }
 }
