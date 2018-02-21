@@ -3,6 +3,7 @@ package io.xsmobilemining.presentation.views.activities;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.KeyEvent;
 import android.webkit.WebViewClient;
 
 import io.xsmobilemining.R;
@@ -19,6 +20,15 @@ public class MiningDashboardActivity extends AppCompatActivity {
         mdBinding = DataBindingUtil.setContentView(this, R.layout.activity_mining_dashboard);
 
         init();
+    }
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if(keyCode == KeyEvent.KEYCODE_BACK && mdBinding.wvMiningDash.canGoBack()){
+            mdBinding.wvMiningDash.goBack();
+            return true;
+        }
+        return super.onKeyDown(keyCode, event);
     }
 
     private void init(){
