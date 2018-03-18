@@ -12,7 +12,7 @@ import io.xsmobilemining.databinding.MiningDashboardBinding;
 public class MiningDashboardActivity extends AppCompatActivity {
 
     MiningDashboardBinding mdBinding;
-    private static final String MINING_DASH_URL = "http://www.allaccesshd.com/XSDashboard/login.php";
+    private static final String MINING_DASH_URL = "https://mining.xonicsystems.io";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
