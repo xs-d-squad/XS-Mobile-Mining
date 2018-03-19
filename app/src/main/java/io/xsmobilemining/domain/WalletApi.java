@@ -38,6 +38,12 @@ public interface WalletApi {
     @GET("get_balance")
     Call<Transaction> getAccountBalance(@Query("api_key") String apiKey);
 
+    @GET("get_address_balance")
+    Call<Transaction> getAddressBalanceByAddress(@Query("api_key") String apiKey, @Query("addresses") String address);
+
+    @GET("get_address_balance")
+    Call<Transaction> getAddressBalanceByLabel(@Query("api_key") String apiKey, @Query("labels") String labels);
+
     // ADDRESSES
    @GET("get_my_addresses_without_balances")
     Call<Transaction> getMyAddressesWithoutBalances(@Query("api_key") String apiKey);
