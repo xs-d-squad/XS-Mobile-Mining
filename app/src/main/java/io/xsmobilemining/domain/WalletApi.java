@@ -34,6 +34,11 @@ public interface WalletApi {
     Call<Transaction> getTransactionsByLabel(@Query("api_key") String apiKey, @Query("type") String requestType, @Query("labels") String lables);
 
     // BALANCE
+    /*Returns the (unarchived) addresses, their labels, user ids, and balances on your account*/
     @GET("get_balance")
     Call<Transaction> getAccountBalance(@Query("api_key") String apiKey);
+
+    // ADDRESSES
+   @GET("get_my_addresses_without_balances")
+    Call<Transaction> getMyAddressesWithoutBalances(@Query("api_key") String apiKey);
 }
