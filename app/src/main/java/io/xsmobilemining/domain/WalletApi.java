@@ -14,6 +14,7 @@ import retrofit2.http.Query;
 
 public interface WalletApi {
 
+    //  TRANSACTIONS
     @GET("get_transactions")
     Call<Transaction> getTransactions(@Query("api_key") String apiKey, @Query("type") String requestType );
 
@@ -32,4 +33,7 @@ public interface WalletApi {
     @GET("get_transactions")
     Call<Transaction> getTransactionsByLabel(@Query("api_key") String apiKey, @Query("type") String requestType, @Query("labels") String lables);
 
+    // BALANCE
+    @GET("get_balance")
+    Call<Transaction> getAccountBalance(@Query("api_key") String apiKey);
 }

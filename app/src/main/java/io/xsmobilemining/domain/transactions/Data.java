@@ -17,6 +17,12 @@ public class Data {
     @SerializedName("txs")
     @Expose
     private List<Tx> txs = null;
+    @SerializedName("available_balance")
+    @Expose
+    private String availableBalance;
+    @SerializedName("pending_received_balance")
+    @Expose
+    private String pendingReceivedBalance;
 
     public String getNetwork() {
         return network;
@@ -34,4 +40,19 @@ public class Data {
         this.txs = txs;
     }
 
+    public String getAvailableBalance() {
+        return availableBalance;
+    }
+
+    public void setAvailableBalance(String availableBalance) {
+        this.availableBalance = availableBalance;
+    }
+
+    public String getPendingReceivedBalance() {
+        return pendingReceivedBalance;
+    }
+
+    public void setPendingReceivedBalance(String pendingReceivedBalance) {
+        this.pendingReceivedBalance = pendingReceivedBalance;
+    }
 }
