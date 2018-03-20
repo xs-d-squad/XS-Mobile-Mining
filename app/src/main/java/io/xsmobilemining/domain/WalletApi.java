@@ -47,4 +47,7 @@ public interface WalletApi {
     // ADDRESSES
    @GET("get_my_addresses_without_balances")
     Call<Transaction> getMyAddressesWithoutBalances(@Query("api_key") String apiKey);
+
+   @GET("get_address_by_label")
+   Call<Transaction> getAddressByLabel(@Query("api_key") String apiKey, @Query("label") String label);
 }

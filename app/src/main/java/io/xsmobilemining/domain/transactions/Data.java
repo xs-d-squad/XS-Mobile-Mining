@@ -14,6 +14,12 @@ public class Data {
     @SerializedName("network")
     @Expose
     private String network;
+    @SerializedName("user_id")
+    @Expose
+    private Integer userId;
+    @SerializedName("label")
+    @Expose
+    private String label;
     @SerializedName("txs")
     @Expose
     private List<Tx> txs = null;
@@ -26,6 +32,9 @@ public class Data {
     @SerializedName("addresses")
     @Expose
     private List<Address> addresses = null;
+    @SerializedName("address")
+    @Expose
+    private String address;
 
     public String getNetwork() {
         return network;
@@ -33,6 +42,22 @@ public class Data {
 
     public void setNetwork(String network) {
         this.network = network;
+    }
+
+    public Integer getUserId() {
+        return userId;
+    }
+
+    public void setUserId(Integer userId) {
+        this.userId = userId;
+    }
+
+    public String getLabel() {
+        return label;
+    }
+
+    public void setLabel(String label) {
+        this.label = label;
     }
 
     public List<Tx> getTxs() {
@@ -66,4 +91,12 @@ public class Data {
     public void setAddresses(List<Address> addresses) {
         this.addresses = addresses;
     }
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
 }
